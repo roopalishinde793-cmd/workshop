@@ -1,0 +1,1248 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AURA Phone | The Future in Your Hands</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            color: #111;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .section-padding {
+            padding: 110px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 1;
+        }
+
+        .section-subtitle {
+            color: #777;
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 20px auto 0;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #111 !important;
+        }
+
+        .brand-dot {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: #0071e3;
+            border-radius: 50%;
+            margin-left: 2px;
+        }
+
+        .nav-link {
+            color: #555 !important;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #0071e3 !important;
+        }
+
+        .nav-buy {
+            background: #111;
+            color: white !important;
+            padding: 9px 20px !important;
+            border-radius: 30px;
+        }
+
+        .nav-buy:hover {
+            background: #0071e3;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 50% 30%,
+                rgba(0, 113, 227, 0.10),
+                transparent 35%),
+                linear-gradient(180deg, #fff 0%, #f7f7f9 100%);
+            padding-top: 90px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #eaf3ff;
+            color: #0071e3;
+            padding: 8px 17px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 9vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -7px;
+            font-weight: 750;
+            margin-bottom: 30px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #111,
+                #555,
+                #0071e3,
+                #111
+            );
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 7s infinite linear;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 300%;
+            }
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: auto;
+            color: #6b6b6b;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .btn-primary-custom {
+            background: #111;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: #0071e3;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            color: #111;
+            border: 1px solid #ccc;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: #111;
+            background: #111;
+            color: white;
+        }
+
+        /* =========================
+           PHONE VISUAL
+        ========================= */
+
+        .phone-area {
+            margin-top: 75px;
+            position: relative;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-glow {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: rgba(0, 113, 227, 0.14);
+            filter: blur(60px);
+        }
+
+        .phone {
+            position: relative;
+            width: 245px;
+            height: 475px;
+            border-radius: 43px;
+            padding: 8px;
+            background: linear-gradient(
+                145deg,
+                #222,
+                #050505,
+                #555
+            );
+            box-shadow:
+                0 45px 90px rgba(0,0,0,.25),
+                inset 0 0 0 2px #777;
+            transform: rotate(-5deg);
+            z-index: 2;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 36px;
+            background:
+                radial-gradient(
+                    circle at 30% 25%,
+                    rgba(0, 113, 227, .9),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 70% 75%,
+                    rgba(127, 52, 255, .85),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #061222,
+                    #03050a
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen-light {
+            position: absolute;
+            width: 180px;
+            height: 400px;
+            background: rgba(255,255,255,.08);
+            transform: rotate(30deg);
+            left: -100px;
+            top: -50px;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85px;
+            height: 25px;
+            border-radius: 30px;
+            background: #000;
+            z-index: 5;
+        }
+
+        .phone-text {
+            position: absolute;
+            bottom: 48px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .phone-text small {
+            opacity: .65;
+        }
+
+        .phone-text h3 {
+            font-size: 1.7rem;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: #111;
+            color: white;
+            padding: 65px 0;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .stat-label {
+            color: #999;
+            font-size: .9rem;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .feature-card {
+            height: 100%;
+            padding: 45px 35px;
+            border-radius: 28px;
+            background: #f6f6f7;
+            transition: .4s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: #fff;
+            border-color: #ddd;
+            box-shadow: 0 25px 60px rgba(0,0,0,.08);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 17px;
+            background: #111;
+            color: white;
+            font-size: 23px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.45rem;
+            font-weight: 650;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CAMERA SECTION
+        ========================= */
+
+        .camera-section {
+            background: #f5f5f7;
+            overflow: hidden;
+        }
+
+        .camera-phone {
+            width: 290px;
+            height: 560px;
+            margin: auto;
+            border-radius: 45px;
+            background: linear-gradient(145deg, #222, #050505);
+            padding: 9px;
+            transform: rotate(7deg);
+            box-shadow: 0 45px 80px rgba(0,0,0,.22);
+        }
+
+        .camera-screen {
+            height: 100%;
+            border-radius: 38px;
+            background:
+                linear-gradient(
+                    140deg,
+                    #f6d365,
+                    #fda085,
+                    #a18cd1,
+                    #5b86e5
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .camera-label {
+            position: absolute;
+            left: 25px;
+            bottom: 30px;
+            color: white;
+        }
+
+        .camera-label h4 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .camera-info h2 {
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            letter-spacing: -3px;
+            font-weight: 700;
+        }
+
+        .camera-info p {
+            color: #777;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .camera-spec {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .camera-spec i {
+            font-size: 25px;
+            color: #0071e3;
+        }
+
+        /* =========================
+           PERFORMANCE
+        ========================= */
+
+        .performance-box {
+            background: #111;
+            border-radius: 35px;
+            color: white;
+            padding: 80px 60px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .performance-box::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: #0071e3;
+            opacity: .18;
+            filter: blur(100px);
+            right: -150px;
+            top: -150px;
+        }
+
+        .performance-title {
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -3px;
+            position: relative;
+        }
+
+        .performance-text {
+            color: #999;
+            line-height: 1.8;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .chip {
+            margin-top: 35px;
+            display: inline-block;
+            border: 1px solid #444;
+            padding: 10px 18px;
+            border-radius: 30px;
+            color: #ccc;
+            font-size: 14px;
+            position: relative;
+        }
+
+        /* =========================
+           PRICING
+        ========================= */
+
+        .price-card {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 35px;
+            padding: 55px;
+            box-shadow: 0 30px 80px rgba(0,0,0,.07);
+        }
+
+        .price-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 750;
+            letter-spacing: -3px;
+            margin: 25px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #888;
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .color {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #bbb;
+        }
+
+        .color.black {
+            background: #111;
+        }
+
+        .color.blue {
+            background: #5d83bd;
+        }
+
+        .color.silver {
+            background: #ddd;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 16px;
+            border-radius: 30px;
+            border: none;
+            background: #0071e3;
+            color: white;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .buy-button:hover {
+            background: #005bb5;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #f5f5f7;
+            padding: 60px 0 30px;
+            color: #777;
+        }
+
+        .footer-brand {
+            color: #111;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            margin-right: 25px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .footer-links a:hover {
+            color: #0071e3;
+        }
+
+        .copyright {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 25px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .phone-area {
+                height: 450px;
+            }
+
+            .phone {
+                width: 210px;
+                height: 410px;
+            }
+
+            .section-padding {
+                padding: 75px 0;
+            }
+
+            .performance-box {
+                padding: 50px 30px;
+            }
+
+            .price-card {
+                padding: 35px 25px;
+            }
+
+            .btn-outline-custom {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            AURA<span class="brand-dot"></span>
+        </a>
+
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+        >
+            <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#camera">Camera</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#performance">Performance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+
+            </ul>
+
+            <a href="#pricing" class="nav-link nav-buy text-center">
+                Buy Now
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                ✦ Introducing AURA One
+            </span>
+
+            <h1>
+                Meet the
+                <span class="gradient-text">future.</span>
+            </h1>
+
+            <p class="hero-description">
+                A beautifully engineered smartphone designed around
+                everything you love. Incredible performance, intelligent
+                photography and a design that feels unmistakably yours.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#pricing" class="btn btn-primary-custom">
+                    Buy AURA One
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+                <a href="#features" class="btn btn-outline-custom">
+                    Explore
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="phone-area">
+
+            <div class="phone-glow"></div>
+
+            <div class="phone">
+
+                <div class="phone-screen">
+
+                    <div class="dynamic-island"></div>
+
+                    <div class="screen-light"></div>
+
+                    <div class="phone-text">
+
+                        <small>AURA</small>
+
+                        <h3>ONE</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row text-center g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="stat-number">6.7"</div>
+                <div class="stat-label">Super Retina Display</div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-number">48MP</div>
+                <div class="stat-label">Pro Camera System</div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-number">24h</div>
+                <div class="stat-label">All-day battery</div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-number">5G</div>
+                <div class="stat-label">Ultra-fast connectivity</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section id="features" class="section-padding">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Designed to<br>do more.
+            </h2>
+
+            <p class="section-subtitle">
+                Every detail of AURA One has been carefully designed
+                to make your everyday experience faster, smarter and
+                more enjoyable.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h3>AURA X1 Chip</h3>
+
+                    <p>
+                        Our most powerful mobile processor delivers
+                        exceptional performance while intelligently
+                        managing power consumption.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-display"></i>
+                    </div>
+
+                    <h3>Brilliant Display</h3>
+
+                    <p>
+                        Experience stunning colors, deep blacks and
+                        ultra-smooth scrolling on our immersive
+                        120Hz OLED display.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h3>Private by Design</h3>
+
+                    <p>
+                        Your personal information stays yours with
+                        advanced security technology built into every
+                        layer of AURA One.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CAMERA
+========================= -->
+
+<section id="camera" class="camera-section section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="camera-phone">
+
+                    <div class="camera-screen">
+
+                        <div class="camera-label">
+
+                            <small>PRO CAMERA</small>
+
+                            <h4>See more.</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="camera-info">
+
+                    <span class="text-primary fw-semibold">
+                        PRO CAMERA SYSTEM
+                    </span>
+
+                    <h2 class="mt-3">
+                        Turn moments<br>
+                        into memories.
+                    </h2>
+
+                    <p class="mt-4">
+                        Capture extraordinary detail in every frame.
+                        The AURA One camera system combines a high-resolution
+                        main sensor with intelligent image processing for
+                        beautiful photos in almost any light.
+                    </p>
+
+
+                    <div class="camera-spec">
+
+                        <i class="bi bi-camera"></i>
+
+                        <div>
+                            <strong>48MP Main Camera</strong>
+                            <br>
+                            <small class="text-muted">
+                                Incredible detail and clarity
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="camera-spec">
+
+                        <i class="bi bi-moon-stars"></i>
+
+                        <div>
+                            <strong>Night Vision</strong>
+                            <br>
+                            <small class="text-muted">
+                                More light. More detail. Even at night.
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="camera-spec">
+
+                        <i class="bi bi-camera-reels"></i>
+
+                        <div>
+                            <strong>4K Cinematic Video</strong>
+                            <br>
+                            <small class="text-muted">
+                                Professional-looking video anywhere.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PERFORMANCE
+========================= -->
+
+<section id="performance" class="section-padding">
+
+    <div class="container">
+
+        <div class="performance-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="performance-title">
+                        Power without
+                        compromise.
+                    </h2>
+
+                    <p class="performance-text mt-4">
+                        From demanding games to professional photography,
+                        AURA One is built to keep up with you. The new X1
+                        processor delivers fast, responsive performance
+                        while maintaining exceptional efficiency.
+                    </p>
+
+                    <span class="chip">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        AURA X1 • 3nm Architecture
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section id="pricing" class="section-padding bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Your AURA awaits.
+            </h2>
+
+            <p class="section-subtitle">
+                Choose your finish and experience the next generation
+                of smartphone technology.
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <div class="d-flex justify-content-between align-items-start">
+
+                <div>
+                    <h3>AURA One</h3>
+
+                    <p class="text-muted">
+                        256GB
+                    </p>
+                </div>
+
+                <span class="badge rounded-pill bg-dark">
+                    New
+                </span>
+
+            </div>
+
+
+            <div class="price">
+                ₹79,999
+                <span>incl. taxes</span>
+            </div>
+
+
+            <p class="text-muted">
+                Available in three premium finishes.
+            </p>
+
+
+            <div class="color-options">
+
+                <span
+                    class="color black"
+                    title="Midnight"
+                ></span>
+
+                <span
+                    class="color blue"
+                    title="Ocean Blue"
+                ></span>
+
+                <span
+                    class="color silver"
+                    title="Silver"
+                ></span>
+
+            </div>
+
+
+            <button class="buy-button">
+                Buy AURA One
+                <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+
+
+            <div class="row text-center mt-4 g-3">
+
+                <div class="col-4">
+                    <i class="bi bi-truck text-primary"></i>
+                    <small class="d-block mt-2">
+                        Free Delivery
+                    </small>
+                </div>
+
+                <div class="col-4">
+                    <i class="bi bi-arrow-repeat text-primary"></i>
+                    <small class="d-block mt-2">
+                        14-Day Returns
+                    </small>
+                </div>
+
+                <div class="col-4">
+                    <i class="bi bi-shield-check text-primary"></i>
+                    <small class="d-block mt-2">
+                        1-Year Warranty
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+
+                <div class="footer-brand">
+                    AURA<span class="brand-dot"></span>
+                </div>
+
+                <p class="mt-3">
+                    Technology designed around you.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-7 text-md-end">
+
+                <div class="footer-links">
+
+                    <a href="#features">Features</a>
+
+                    <a href="#camera">Camera</a>
+
+                    <a href="#performance">Performance</a>
+
+                    <a href="#pricing">Buy</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright d-flex justify-content-between flex-wrap gap-3">
+
+            <span>
+                © 2026 AURA Technologies. All rights reserved.
+            </span>
+
+            <span>
+                Privacy &nbsp; • &nbsp; Terms &nbsp; • &nbsp; Support
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
